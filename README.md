@@ -60,5 +60,3 @@ streamlit run app.py
 ## Observações
 - Projeto simples para fins acadêmicos. Não use em produção sem adicionar autenticação, validação completa e políticas de segurança (LGPD).
 - Para avaliação, deixe o repositório público e inclua prints/gifs em `exemplos/` se quiser demonstrar fluxo.
-
-Bom trabalho! Qualquer ajuste (linguagem, estrutura, exemplos) eu adapto pra você.
