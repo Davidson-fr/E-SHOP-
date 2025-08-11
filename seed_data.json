@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "sku": "WAVE-0001",
+      "name": "Prancha Wave 6'0",
+      "category": "Pranchas",
+      "price": 1299.9,
+      "stock": 10
+    },
+    {
+      "sku": "WAVE-0002",
+      "name": "Leash Pro 6mm",
+      "category": "Acessórios",
+      "price": 79.9,
+      "stock": 150
+    },
+    {
+      "sku": "WAVE-0003",
+      "name": "Roupão Surf Classic",
+      "category": "Moda",
+      "price": 199.9,
+      "stock": 25
+    },
+    {
+      "sku": "WAVE-0004",
+      "name": "Capa Prancha 6'0",
+      "category": "Acessórios",
+      "price": 249.9,
+      "stock": 40
+    },
+    {
+      "sku": "WAVE-0005",
+      "name": "Quilha Thruster",
+      "category": "Peças",
+      "price": 149.9,
+      "stock": 0
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ORD-1001",
+      "customer": "João Silva",
+      "items": [
+        {
+          "sku": "WAVE-0001",
+          "qty": 1,
+          "price": 1299.9
+        }
+      ],
+      "total": 1299.9,
+      "status": "shipped"
+    },
+    {
+      "order_id": "ORD-1002",
+      "customer": "Maria Souza",
+      "items": [
+        {
+          "sku": "WAVE-0002",
+          "qty": 2,
+          "price": 79.9
+        },
+        {
+          "sku": "WAVE-0003",
+          "qty": 1,
+          "price": 199.9
+        }
+      ],
+      "total": 359.7,
+      "status": "processing"
+    }
+  ]
+}

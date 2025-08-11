@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: eshop_mongo
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+  app:
+    build: .
+    container_name: eshop_app
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/eshop
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./:/app
+    restart: on-failure
+
+  seed:
+    image: python:3.10-slim
+    container_name: eshop_seed
+    depends_on:
+      - mongo
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: ["python", "seed_db.py"]
+    restart: "no"
+
+volumes:
+  mongo_data:
